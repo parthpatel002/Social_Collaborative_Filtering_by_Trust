@@ -7,6 +7,7 @@ This repo contains the implementation of the research paper [Social Collaborativ
 Collaborative Filtering (CF) is a popular technique used by recommender systems. It essentially makes predictions about the preferences of a user by collecting preferences or taste information from many other users (collaboration). CF suffers from a number of problems, the major two among those being:
 * Data Sparsity: As users don’t rate all available items, the given ratings dataset is extremely sparse and not a lot can be gleamed from it.
 * Cold Start: It is difficult to give accurate recommendations to new users because we don’t have a lot of information on his or her preferences and tastes.
+
 This paper attempts to use the concept of trust to overcome the data sparsity and cold start problem. Trust relationship is one of the most important types of social information, because we are more likely to accept viewpoints from those we trust.
 
 ## Epinions Dataset
@@ -26,6 +27,7 @@ This paper attempts to use the concept of trust to overcome the data sparsity an
 | # Friends per user |       9.88       |
 
 The `data` folder contains the Epinions dataset - both ratings data and trust data. The `npy_files` folder contains following four summarising files for Epinions dataset:
+
 1. `nbi.npy`: It is a Numpy array containing number of ratings given by each user.
 2. `nvj.npy`: It is a Numpy array containing number of ratings given to each item.
 3. `mbi.npy`: It is a Numpy array containing number of users trusted by each user.
