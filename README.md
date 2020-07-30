@@ -45,15 +45,15 @@ Due to asymmetry property of trust, each user is mapped as two distinct `D`-dime
 
 The research paper describes two trust models:
 
-1. TrustMF: It consists of two sub-models - TrusterMF (which approximates user-feature matrix `U` with `B`) and TrusteeMF (which approximates user-feature matrix `U` with `W`). The final rating output for an user and an item is the mean of rating outputs of the two sub-models.
+1. **TrustMF**: It consists of two sub-models - TrusterMF (which approximates user-feature matrix `U` with `B`) and TrusteeMF (which approximates user-feature matrix `U` with `W`). The final rating output for an user and an item is the mean of rating outputs of the two sub-models.
 
-2. TrustPMF: It considers the fact that an user's browsing interest (i.e. `B`) or writing interest (i.e. `W`) is not usually strictly identical to his/her genuine interest (i.e. `U`). Consequently, it provides a probabilistic interpretation to the deterministic Truster/Trustee/TrustMF models, and can more accurately infer interest pattern of users.
+2. **TrustPMF**: It considers the fact that an user's browsing interest (i.e. `B`) or writing interest (i.e. `W`) is not usually strictly identical to his/her genuine interest (i.e. `U`). Consequently, it provides a probabilistic interpretation to the deterministic Truster/Trustee/TrustMF models, and can more accurately infer interest pattern of users.
 
 This repo contains two Jupyter notebooks - one for TrustMF model and the other for TrustPMF model. Each notebook consists of following three parts:
 
-1. Read input data i.e. ratings data and trust data.
-2. Train TrustMF/TrustPMF model.
-3. Compute following evaluation metrics:
+**1**. Read input data i.e. ratings data and trust data.
+**2**. Train TrustMF/TrustPMF model.
+**3**. Compute following evaluation metrics:
   * Validation on all users using mean absolute error (MAE) and root mean square error (RMSEE) - Paper section `4.3.1`.
   * Validation on cold start users using mean absolute error (MAE) and root mean square error (RMSEE) - Paper section `4.3.2`.
   * Validation on rank-based metrics i.e Precision, Recall and F1-score - Paper section `4.3.4`.
