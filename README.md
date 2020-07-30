@@ -1,8 +1,8 @@
 # Implementation of the research paper titled "Social Collaborative Filtering by Trust" in PyTorch using Epinions Dataset.
 
-## Recommender Systems - Collaborative Filtering
+This repo contains the implementation of the research paper [Social Collaborative Filtering by Trust](https://www.computer.org/csdl/journal/tp/2017/08/07558226/13rRUwbs1TN) in PyTorch. It was done for the partial fulfillment of the on-campus course Informaion Retrieval (CS F469). 
 
-This repo contains the implementation of the research paper [Social Collaborative Filtering by Trust](https://www.computer.org/csdl/journal/tp/2017/08/07558226/13rRUwbs1TN) in PyTorch. It was done for the partial fulfillment of the course Informaion Retrieval (CS F469). 
+## Recommender Systems - Collaborative Filtering
 
 **Collaborative Filtering (CF)** is a popular technique used by recommender systems. It essentially makes predictions about the preferences of a user by collecting preferences or taste information from many other users (collaboration). CF suffers from a number of problems, the major two among those being:
 * **Data Sparsity**: As users don’t rate all available items, the given ratings dataset is extremely sparse and not a lot can be gleamed from it.
