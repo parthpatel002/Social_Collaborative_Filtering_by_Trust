@@ -35,30 +35,28 @@ The `data` folder contains the Epinions dataset - both ratings data and trust da
 
 ## Terminology used in the Paper
 
-Let there be **`M`** users and **`N`** items in the dataset. Then, let `R` denote a `MxN` user-item rating matrix and `T` denote a `MxM` matrix represnting directional trust relationships among users. 
+Let there be **`M`** users and **`N`** items in the dataset. Then, let **`R`** denote a **`MxN`** user-item rating matrix and **`T`** denote a **`MxM`** matrix represnting directional trust relationships among users. 
 
-Let `D` denote dimensionality of latent space used to represent users and items. Then, let `U` and `V` be `DxM` and `DxN` matrices representing user feature matrix and item feature matrix respectively. Hence, the ratings matrix `R` can be approximated as inner product of `U` and `V`. 
+Let **`D`** denote dimensionality of latent space used to represent users and items. Then, let **`U`** and **`V`** be **`DxM`** and **`DxN`** matrices representing user feature matrix and item feature matrix respectively. Hence, the ratings matrix **`R`** can be approximated as inner product of **`U`** and **`V`**. 
 
-Due to asymmetry property of trust, each user is mapped as two distinct `D`-dimensional latent feature vectors, depicted by truster-specific feature vectors `B` and trustee-specific feature vectors `W` (each of `DxM` shape), characterizing the behaviours of "to trust others" and "to be trusted by others" respectively. Hence, the trust matrix `T` can be approximated as inner product of `B` and `W`. 
+Due to asymmetry property of trust, each user is mapped as two distinct **`D`** dimensional latent feature vectors, depicted by truster-specific feature vectors **`B`** and trustee-specific feature vectors **`W`** (each of **`DxM`** shape), characterizing the behaviours of "to trust others" and "to be trusted by others" respectively. Hence, the trust matrix **`T`** can be approximated as inner product of **`B`** and **`W`**. 
 
 ## Trust Models proposed in the Paper
 
 The research paper describes two trust models:
 
-1. **TrustMF**: It consists of two sub-models - TrusterMF (which approximates user-feature matrix `U` with `B`) and TrusteeMF (which approximates user-feature matrix `U` with `W`). The final rating output for an user and an item is the mean of rating outputs of the two sub-models.
+1. **TrustMF**: It consists of two sub-models - TrusterMF (which approximates user-feature matrix **`U`** with **`B`**) and TrusteeMF (which approximates user-feature matrix **`U`** with **`W`**). The final rating output for an user and an item is the mean of rating outputs of the two sub-models.
 
-2. **TrustPMF**: It considers the fact that an user's browsing interest (i.e. `B`) or writing interest (i.e. `W`) is not usually strictly identical to his/her genuine interest (i.e. `U`). Consequently, it provides a probabilistic interpretation to the deterministic Truster/Trustee/TrustMF models, and can more accurately infer interest pattern of users.
+2. **TrustPMF**: It considers the fact that an user's browsing interest (i.e. **`B`**) or writing interest (i.e. **`W`**) is not usually strictly identical to his/her genuine interest (i.e. **`U`**). Consequently, it provides a probabilistic interpretation to the deterministic Truster/Trustee/TrustMF models, and can more accurately infer interest pattern of users.
 
-This repo contains two Jupyter notebooks - one for TrustMF model and the other for TrustPMF model. Each notebook consists of following three parts:
+This repo contains two Jupyter notebooks - one for TrustMF model (**`TrustMF_Model.ipynb`**) and the other for TrustPMF (**`TrustPMF_Model.ipynb`**) model. Each notebook consists of following three parts:
 
-**1**. Read input data i.e. ratings data and trust data.
-
-**2**. Train TrustMF/TrustPMF model.
-
+**1**. Read input data i.e. ratings data and trust data. 
+**2**. Train TrustMF/TrustPMF model. 
 **3**. Compute following evaluation metrics:
-  * Validation on all users using mean absolute error (MAE) and root mean square error (RMSEE) - Paper section `4.3.1`.
-  * Validation on cold start users using mean absolute error (MAE) and root mean square error (RMSEE) - Paper section `4.3.2`.
-  * Validation on rank-based metrics i.e Precision, Recall and F1-score - Paper section `4.3.4`.
+  * Validation on all users using mean absolute error (**MAE**) and root mean square error (**RMSE**) - Paper section `4.3.1`.
+  * Validation on cold start users using mean absolute error (**MAE**) and root mean square error (**RMSE**) - Paper section `4.3.2`.
+  * Validation on rank-based metrics i.e **Precision**, **Recall** and **F1-score** - Paper section `4.3.4`.
 
 The following flowchart summarises the above points:
 
