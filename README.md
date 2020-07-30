@@ -12,7 +12,7 @@ This paper attempts to use the **concept of trust** to overcome the data sparsit
 
 ## Epinions Dataset
 
-[Epinions dataset](http://www.trustlet.org/downloaded_epinions.html) is used in this project. It allows users to rate items, browse/write reviews, add friends, and hence provide ratings, reviews and social relations. The trust network in Epinions is directed (i.e. if user A trusts user B, user B may or may not trust user A). Rating values given by users to items range from 1 to 5. The following table shows statistics of Epinions dataset:
+[Epinions dataset](http://www.trustlet.org/downloaded_epinions.html) is used in this project. It allows users to rate items, browse/write reviews, add friends, and hence provide ratings, reviews and social relations. The trust network in Epinions is directed (i.e. if user A trusts user B, user B may or may not trust user A). Rating values given by users to items range from `1` to `5`. The following table shows statistics of Epinions dataset:
 
 | Statistics         | Epinions Dataset |
 |--------------------|------------------|
@@ -35,7 +35,7 @@ The `data` folder contains the Epinions dataset - both ratings data and trust da
 
 ## Terminology used in the Paper
 
-Let there be `M` users and `N` items. Then, let `R` denote a `MxN` user-item rating matrix and `T` denote a `MxM` matrix represnting directional trust relationships among users. 
+Let there be **`M`** users and **`N`** items in the dataset. Then, let `R` denote a `MxN` user-item rating matrix and `T` denote a `MxM` matrix represnting directional trust relationships among users. 
 
 Let `D` denote dimensionality of latent space used to represent users and items. Then, let `U` and `V` be `DxM` and `DxN` matrices representing user feature matrix and item feature matrix respectively. Hence, the ratings matrix `R` can be approximated as inner product of `U` and `V`. 
 
