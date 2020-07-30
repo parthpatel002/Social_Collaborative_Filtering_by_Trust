@@ -51,9 +51,9 @@ The research paper describes two trust models:
 
 This repo contains two Jupyter notebooks - one for TrustMF model (**`TrustMF_Model.ipynb`**) and the other for TrustPMF (**`TrustPMF_Model.ipynb`**) model. Each notebook consists of following three parts:
 
-**1**. Read input data i.e. ratings data and trust data. 
-**2**. Train TrustMF/TrustPMF model. 
-**3**. Compute following evaluation metrics:
+**1**. Read input data i.e. ratings data and trust data.  
+**2**. Train TrustMF/TrustPMF model.  
+**3**. Compute following evaluation metrics:  
   * Validation on all users using mean absolute error (**MAE**) and root mean square error (**RMSE**) - Paper section `4.3.1`.
   * Validation on cold start users using mean absolute error (**MAE**) and root mean square error (**RMSE**) - Paper section `4.3.2`.
   * Validation on rank-based metrics i.e **Precision**, **Recall** and **F1-score** - Paper section `4.3.4`.
